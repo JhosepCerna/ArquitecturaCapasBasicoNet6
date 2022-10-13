@@ -1,8 +1,38 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<CapasBasico.Entidades.Personal>
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Lista de Personal</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nro. Documento</th>
+                <th scope="col">Nombres y Apellidos</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Cargo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@incremento(@contador)</th>
+                    <td>@item.NumeroDocumento</td>
+                    <td>@item.Nombres @item.Apellidos</td>
+                    <td>@item.Edad<td>
+                    <td>@item.IdCargoNavigation.Descripcion<td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
+
+@functions{
+    int contador = 0;
+
+    int incremento(int contar)
+    {
+        contador = ++contar;
+        return contador;
+    }
+}
