@@ -1,7 +1,22 @@
+using CapasBasico.AccesoDatos;
+using CapasBasico.AccesoDatos.Interface;
+using CapasBasico.Entidades;
+using CapasBasico.LogicaNegocio;
+using CapasBasico.LogicaNegocio.Interface;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<CapasNetContext>(options =>
+    {
+        options.UseSqlServer(builder.Configuration.GetConnectionString("Default"), sqlOptions => sqlOptions.CommandTimeout(120));
+    }
+);
+
+builder.Services.AddScoped<IPersonalDatos, PersonalDatos>();
+builder.Services.AddScoped<IPersonalLogica, PersonalLogica>();
 
 var app = builder.Build();
 

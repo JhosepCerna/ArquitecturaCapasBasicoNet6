@@ -1,5 +1,6 @@
 ﻿using CapasBasico.AccesoDatos.Interface;
 using CapasBasico.Entidades;
+using Microsoft.EntityFrameworkCore;
 
 namespace CapasBasico.AccesoDatos
 {
@@ -12,7 +13,7 @@ namespace CapasBasico.AccesoDatos
         }
 
         public IEnumerable<Personal> GetAll() {
-            return _context.Personals.OrderBy(e => e.NumeroDocumento);
+            return _context.Personals.Include(c => c.IdCargoNavigation).ToList();
         }
     }
 }
