@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Presentacion", "3.Present
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Entidades", "4.Entidades", "{36461967-B5A9-44B9-9B23-85469B230CC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapasBasico.AppWeb", "CapasBasico.AppWeb\CapasBasico.AppWeb.csproj", "{CBBE0806-8D4A-49D2-A041-B5D4EA7BF72D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapasBasico.AppWeb", "CapasBasico.AppWeb\CapasBasico.AppWeb.csproj", "{CBBE0806-8D4A-49D2-A041-B5D4EA7BF72D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapasBasico.AccesoDatos", "CapasBasico.AccesoDatos\CapasBasico.AccesoDatos.csproj", "{4579C7F7-47DE-42A7-909F-CC04590D647A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapasBasico.AccesoDatos", "CapasBasico.AccesoDatos\CapasBasico.AccesoDatos.csproj", "{4579C7F7-47DE-42A7-909F-CC04590D647A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapasBasico.LogicaNegocio", "CapasBasico.LogicaNegocio\CapasBasico.LogicaNegocio.csproj", "{BB0E55D7-BB29-4CFB-ABB6-5F88D205C6B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapasBasico.LogicaNegocio", "CapasBasico.LogicaNegocio\CapasBasico.LogicaNegocio.csproj", "{BB0E55D7-BB29-4CFB-ABB6-5F88D205C6B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapasBasico.Entidades", "CapasBasico.Entidades\CapasBasico.Entidades.csproj", "{E12EF756-1D0F-4FCB-A11D-5D6F1CADC716}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapasBasico.Entidades", "CapasBasico.Entidades\CapasBasico.Entidades.csproj", "{E12EF756-1D0F-4FCB-A11D-5D6F1CADC716}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

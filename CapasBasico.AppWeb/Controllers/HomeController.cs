@@ -1,4 +1,5 @@
 ﻿using CapasBasico.AppWeb.Models;
+using CapasBasico.LogicaNegocio.Interface;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,15 +8,18 @@ namespace CapasBasico.AppWeb.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IPersonalLogica _personalLogica;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IPersonalLogica personalLogica)
         {
             _logger = logger;
+            _personalLogica = personalLogica;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var lista = _personalLogica.GetAllPersonal();
+            return View(lista);
         }
 
         public IActionResult Privacy()
