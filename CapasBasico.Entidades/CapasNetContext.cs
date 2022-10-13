@@ -25,9 +25,7 @@ namespace CapasBasico.Entidades
             {
                 entity.ToTable("Cargo");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Descripcion)
                     .HasMaxLength(100)
